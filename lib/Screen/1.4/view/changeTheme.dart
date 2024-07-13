@@ -1,79 +1,125 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/provider.dart';
-
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
-    Homeprovider homeproviderTrue =
-    Provider.of<Homeprovider>(context, listen: true);
-    Homeprovider homeproviderFalse =
-    Provider.of<Homeprovider>(context, listen: false);
-    return SafeArea(
-      child: Scaffold(
-        body: ListView(
+    Homeprovider ThemeProviderTrue =
+        Provider.of<Homeprovider>(context, listen: true);
+    Homeprovider ThemeProviderFalse =
+        Provider.of<Homeprovider>(context, listen: false);
+    Homeprovider changeThemeFalse =
+        Provider.of<Homeprovider>(context, listen: false);
+    Homeprovider changeThemeTrue =
+        Provider.of<Homeprovider>(context, listen: true);
+
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(
+          Icons.arrow_back_ios,
+          color: Colors.grey,
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.add_box_rounded),
+            color: Colors.grey,
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: Center(
+        child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [IconButton(
-                onPressed: () {}, icon: Icon(
-                Icons.arrow_back_ios_rounded, size: 30,),),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.add_circle_outline_rounded, size: 35,),),],),
             Container(
-              height: h * 0.22,
-              width: w * 0.22,
+              height: 150,
+              width: 150,
               decoration: BoxDecoration(
-                color: Colors.cyan,
+                  color: Colors.grey,
                   shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black26, blurRadius: 2, spreadRadius: 2)
+                  ],
                   image: DecorationImage(
-                      fit: BoxFit.contain,
-                      image: AssetImage('assets/images/profileImage3.jpg'))),
+                      image: AssetImage('assets/user.jpeg'),
+                      fit: BoxFit.cover)),
             ),
-            SizedBox(
-              height: h * 0.010,
+            SizedBox(height: 15),
+            Text(
+              'Prachi Singh ',
+              style: TextStyle(fontSize: 27, fontWeight: FontWeight.w500),
             ),
-            Align(
-              alignment: Alignment.center,
-              child: Text('prachi singh', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
-              ),
-            ), SizedBox(height: h * 0.050,),
+            SizedBox(height: 70),
             ListTile(
-              leading: Icon(Icons.mode_night, size: 30,color: Theme.of(context).colorScheme.primary,),
-              trailing: Switch(value: homeproviderTrue.isDark, onChanged: (value) {homeproviderFalse.changeTheme();},
+              leading: changeThemeTrue.isDark
+                  ? Icon(
+                      Icons.mode_night_sharp,
+                      color: Theme.of(context).colorScheme.primary,
+                    )
+                  : Icon(
+                      Icons.light_mode,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+              title: Text(
+                '${changeThemeTrue.isDark ? 'Dark' : 'Light'} Mode',
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              title: Text('Dark Mode', style: TextStyle(fontSize: 20),),),
-            buildListTile(
-                leadingIcon: Icons.grid_on_rounded, leadingText: 'Story'),
-            buildListTile(
-                leadingIcon: Icons.settings,
-                leadingText: 'Settings and Privacy'),
-            buildListTile(
-                leadingIcon: Icons.message_outlined,
-                leadingText: 'Help Center'),
-            buildListTile(
-                leadingIcon: Icons.notifications, leadingText: 'Notification',),
+              trailing: Switch(
+                onChanged: (value) {
+                  changeThemeFalse.changeTheme();
+                },
+                value: changeThemeTrue.isDark,
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.grid_on,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+              title: Text(
+                'Story',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: changeThemeTrue.isDark ? Colors.pink : Colors.blue,
+              ),
+              title: Text(
+                'Settings and Privacy',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.comment_outlined,
+                color: changeThemeTrue.isDark
+                    ? Colors.yellowAccent.shade100
+                    : Colors.redAccent,
+              ),
+              title: Text(
+                'Help Center',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.notifications,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+              title: Text(
+                'Notification',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
           ],
         ),
-      ),
-    );
-  }
-  ListTile buildListTile({required leadingIcon, required leadingText}) {
-    return ListTile(
-      leading: Icon(
-        leadingIcon,
-        size: 25,
-      ),
-      title: Text(
-        leadingText,
-        style: TextStyle(fontSize: 20),
       ),
     );
   }
