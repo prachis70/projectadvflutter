@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:projectadvflutter/Screen/1.1/view/theme.dart';
 import 'package:projectadvflutter/Screen/1.2/stepper2.dart';
 import 'package:projectadvflutter/Screen/1.4/view/changeTheme.dart';
-import 'package:projectadvflutter/Screen/Provider/datamodel.dart';
-import 'package:projectadvflutter/Screen/View/HomeScreen.dart';
 import 'package:provider/provider.dart';
 import 'Screen/1.2/stepper.dart';
 import 'Screen/1.4/provider/provider.dart';
