@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:projectadvflutter/Screen/1.1/view/theme.dart';
 import 'package:projectadvflutter/Screen/1.2/stepper2.dart';
 import 'package:projectadvflutter/Screen/1.4/view/changeTheme.dart';
+import 'package:projectadvflutter/Screen/Intro_Screen/Easy_Payment.dart';
 import 'package:provider/provider.dart';
 import 'Screen/1.2/stepper.dart';
 import 'Screen/1.4/provider/provider.dart';
+import 'Screen/Intro_Screen/FreshFood.dart';
 
 void main() {
   return runApp(ChangeNotifierProvider(
@@ -32,9 +34,10 @@ void main() {
       routes: {
       //  '/': (context) => Homepage(),
         // '/changeTheme': (context) => ChangeThemeProvider(),
-         '/': (context) => steper(),
-         '/steper': (context) => steper2(),
+        //  '/': (context) => steper(),
+        //  '/steper': (context) => steper2(),
         // '/theme': (context) => theme(),
+        '/':(context)=>fresh_Food(),
       },
     ),
   ));
