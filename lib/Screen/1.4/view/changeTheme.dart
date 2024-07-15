@@ -36,8 +36,8 @@ class Homepage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 150,
-              width: 150,
+              height: 156,
+              width: 140,
               decoration: BoxDecoration(
                   color: Colors.grey,
                   shape: BoxShape.circle,
@@ -46,7 +46,7 @@ class Homepage extends StatelessWidget {
                         color: Colors.black26, blurRadius: 2, spreadRadius: 2)
                   ],
                   image: DecorationImage(
-                      image: AssetImage('assets/user.jpeg'),
+                      image: AssetImage('assets/imgs/user.jpeg'),
                       fit: BoxFit.cover)),
             ),
             SizedBox(height: 15),
