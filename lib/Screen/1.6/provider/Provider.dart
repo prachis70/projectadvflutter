@@ -1,17 +1,33 @@
-import 'package:flutter/material.dart';
+
+import 'package:flutter/cupertino.dart';
 import 'package:url_launcher/url_launcher.dart';
-class HomeProvider extends ChangeNotifier
+
+class ContactHomeProvider extends ChangeNotifier
 {
-  void louncherWebsite()
+  void launcherPhone()
   {
-    Uri uri = Uri.parse("	https://flutter.dev");
-   launchUrl(uri);
-   notifyListeners();
-  }
-  void louncherGmail()
-  {
-    Uri uri = Uri.parse("mailto:prachi@gmail.com");
+    Uri uri = Uri.parse('tel:+91 6352413467');
     launchUrl(uri);
-    notifyListeners();
   }
+  void launcherEmail()
+  {
+    Uri uri = Uri.parse('mailto:sharmashalu3148@gmail.com');
+    launchUrl(uri);
+  }
+  void launcherWebsite()
+  {
+    Uri uri = Uri.parse('https://api.flutter.dev/');
+    launchUrl(uri);
+  }
+  void launcherSocial()
+  {
+    Uri uri = Uri.parse('https://github.com/prachis70');
+    launchUrl(uri);
+  }
+  void launcherSocial1()
+  {
+    Uri uri = Uri.parse('https://www.linkedin.com/feed/');
+    launchUrl(uri);
+  }
+
 }
