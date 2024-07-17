@@ -17,17 +17,10 @@
 
 
 # url_launcher
-<img src= "https://github.com/user-attachments/assets/53847061-493b-48ea-ac17-d95cc8814a26" heigth=22% width=28%>
 
-<img src= "https://github.com/user-attachments/assets/6846eb95-c16e-425a-9311-3edac60e6b00" heigth=22% width=28%>
-
+<img src="https://github.com/user-attachments/assets/b2e0a51f-665e-4d86-b8cc-885e3c663137"  heigth=22% width=28%>
 
 
 
 
 
-
-
-
-<video src="https://github.com/user-attachments/assets/c5cf90fc-3ccd-4057-82ef-79dd91062b7b" heigth=22% width=28%>
-<video src="https://github.com/user-attachments/assets/f2d212ed-a1e2-46c7-9e90-c667fdc612ce" heigth=22% width=28%>
