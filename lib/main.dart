@@ -10,7 +10,7 @@
 // import 'package:provider/provider.dart';
 // import 'Screen/1.2/stepper.dart';
 // import 'Screen/1.4/provider/provider.dart';
-// import 'Screen/1.6/provider/Provider.dart';
+// import 'Screen/1.6/provider/auth_provider.dart';
 // import 'Screen/Intro_Screen/view/FreshFood.dart';
 //
 // //bool theme= false;
@@ -49,28 +49,57 @@
 //     ),
 //   ));
 // }
+// import 'package:flutter/material.dart';
+// import 'package:projectadvflutter/Screen/1.6/view/Homepage.dart';
+// import 'package:provider/provider.dart';
+// import 'package:url_launcher/url_launcher.dart';
+//
+// import 'Screen/1.6/provider/auth_provider.dart';
+//
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return ChangeNotifierProvider(
+//       create: (context) => ContactHomeProvider(),
+//       builder: (context, child) => MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         home: Homepage(),
+//       ),
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
-import 'package:projectadvflutter/Screen/1.6/view/Homepage.dart';
+import 'package:projectadvflutter/Screen/%20Gallery%20With%20Biometric%20Authentication/Provider/auth_provider.dart';
+import 'package:projectadvflutter/Screen/%20Gallery%20With%20Biometric%20Authentication/view/SecondScreen.dart';
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import 'Screen/1.6/provider/Provider.dart';
-
-void main() {
+import 'Screen/ Gallery With Biometric Authentication/view/HomePage.dart';
+void main()
+{
   runApp(MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => ContactHomeProvider(),
-      builder: (context, child) => MaterialApp(
+      create: (context) => AuthHomeProvider(),
+      builder: (context, child) =>  MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Homepage(),
+        routes: {
+          '/':(context)=>Gallary(),
+          '/second':(context)=>GallaryScreen(),
+        },
       ),
     );
   }
 }
+
