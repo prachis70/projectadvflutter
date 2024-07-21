@@ -126,12 +126,13 @@ The following code snippets help to understand the concept of ChangeNotifierProv
 
 
 # Contact Us Page With Interaction
+# Url_launchar Package
+* You should learn about the url_launcher package to add more functionality to your Flutter app.
+* With this package, you can launch URLs, open email apps, dial phone numbers, and more from within your app.
+
 <img src= "https://github.com/user-attachments/assets/e0a52c76-d709-4b4e-b5a5-3b4a49f64d40" heigth=22% width= 28%>
 
 https://github.com/user-attachments/assets/54953111-ad0e-456f-b60e-57c48c053915
-
-
-# url_launcher:-
 
 #  Photo Gallery With Biometric Authentication
 * Local Authentication Package
