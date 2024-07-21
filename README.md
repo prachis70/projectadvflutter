@@ -107,13 +107,6 @@ return Consumer<Counter>(
 <img src="https://github.com/user-attachments/assets/0271e641-60fd-495d-821c-cac1e4091ba7" heigth=25% width=25%>
 <img src="https://github.com/user-attachments/assets/c0152141-a305-4c04-8ee9-eaa0b2a3d64e" heigth=25% width=25%>
 
-https://github.com/user-attachments/assets/54953111-ad0e-456f-b60e-57c48c053915
-
-
-# ChangeNotiferProvider:-
-* ChangeNotifierProvider is the widget that provides an instance of a ChangeNotifier to its descendants.
-It comes from the provider package.
-The following code snippets help to understand the concept of ChangeNotifierProvider.
 
 # ChangTheme:-
 <img src="https://github.com/user-attachments/assets/c570082c-9be0-4311-88a6-f39fac42df04" heigth=25% width=25%>
@@ -121,6 +114,15 @@ The following code snippets help to understand the concept of ChangeNotifierProv
 
 https://github.com/user-attachments/assets/ebe4b3f8-bab8-4e85-a514-07474354930b
 
+# ChangeNotiferProvider:-
+* ChangeNotifierProvider is the widget that provides an instance of a ChangeNotifier to its descendants.
+It comes from the provider package.
+The following code snippets help to understand the concept of ChangeNotifierProvider.
+## Provider & Change Theme using Provider
+* Provider & Change Theme using Provider :-
+* The Provider package, created by Remi Rousselet, aims to handle the state as cleanly as possible.
+* In Provider, widgets listen to changes in the state and update as soon as they are notified.
+* Provider State Management, which is recommended by Google as well, mainly provides you with a central point to manage the state, and to write front-end logic. A provider is a third-party library. Here, we need to understand three main concepts to use this library.
 
 # url_launcher:-
 
