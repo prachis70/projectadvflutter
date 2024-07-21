@@ -124,6 +124,12 @@ The following code snippets help to understand the concept of ChangeNotifierProv
 * In Provider, widgets listen to changes in the state and update as soon as they are notified.
 * Provider State Management, which is recommended by Google as well, mainly provides you with a central point to manage the state, and to write front-end logic. A provider is a third-party library. Here, we need to understand three main concepts to use this library.
 
+
+<img src= "https://github.com/user-attachments/assets/e0a52c76-d709-4b4e-b5a5-3b4a49f64d40" heigth=22% width= 28%>
+
+https://github.com/user-attachments/assets/54953111-ad0e-456f-b60e-57c48c053915
+
+
 # url_launcher:-
 
 
