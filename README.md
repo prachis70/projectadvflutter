@@ -43,7 +43,8 @@ State management refers to managing data across widgets, screens, and over time 
  * It is easy to understand, implement, and optimized for a small number of listeners.
  * It is used for the listener to observe a model for changes.
  * In this, we only use the notifyListener() method to inform the listeners.
-# Example:
+## Example:
+```blash 
 
 import 'package:flutter/material.dart';  
   
@@ -67,29 +68,59 @@ class Counter with ChangeNotifier
      _counter--;  
      notifyListeners();  
   }  
-}  
+}
+```  
+# ChangeNotiferProvider
+* ChangeNotifierProvider is the widget that provides an instance of a ChangeNotifier to its descendants.
+* It comes from the provider package.
+* The following code snippets help to understand the concept of ChangeNotifierProvider.
+## Example:
+```blash
+void main() {  
+  runApp(  
+    MultiProvider(  
+      providers: [  
+        ChangeNotifierProvider(builder: (context) => Counter()),  
+        Provider(builder: (context) => SomeOtherClass()),  
+      ],  
+      child: MyApp(),  
+    ),  
+  );  
+}
+```
+# Cousumer:-
+* It is a type of provider that does not do any fancy work.
+* It just calls the provider in a new widget and delegates its build implementation to the builder.
+* The following code explains it more clearly.
+## Example:
+```blash
+return Consumer<Counter>(  
+  builder: (context, count, child) {  
+    return Text("Total price: ${count.total}");  
+  },  
+);
+```
 
-
-# Stepper 
+# Stepper:- 
 <img src="https://github.com/user-attachments/assets/0271e641-60fd-495d-821c-cac1e4091ba7" heigth=25% width=25%>
 <img src="https://github.com/user-attachments/assets/c0152141-a305-4c04-8ee9-eaa0b2a3d64e" heigth=25% width=25%>
 
 https://github.com/user-attachments/assets/54953111-ad0e-456f-b60e-57c48c053915
 
 
-# ChangeNotiferProvider
+# ChangeNotiferProvider:-
 * ChangeNotifierProvider is the widget that provides an instance of a ChangeNotifier to its descendants.
 It comes from the provider package.
 The following code snippets help to understand the concept of ChangeNotifierProvider.
 
-# ChangTheme
+# ChangTheme:-
 <img src="https://github.com/user-attachments/assets/c570082c-9be0-4311-88a6-f39fac42df04" heigth=25% width=25%>
 <img src="https://github.com/user-attachments/assets/a831c4db-c7c1-4397-b227-77d7be22dd77" heigth=25% width=25%>
 
 https://github.com/user-attachments/assets/ebe4b3f8-bab8-4e85-a514-07474354930b
 
 
-# url_launcher
+# url_launcher:-
 
 
 <img src="https://github.com/user-attachments/assets/60485682-cbb3-4c48-9c72-9f17519efbbb" heigth=22% width=28%>
