@@ -109,6 +109,12 @@ return Consumer<Counter>(
 
 
 # ChangTheme:-
+## Shared Preference
+* SharedPreferences provides a persistent storage location for small data.
+* This data remains intact across app restarts, making it perfect for scenarios where you need to save user choices or maintain the state of an app.
+final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+
 <img src="https://github.com/user-attachments/assets/c570082c-9be0-4311-88a6-f39fac42df04" heigth=25% width=25%>
 <img src="https://github.com/user-attachments/assets/a831c4db-c7c1-4397-b227-77d7be22dd77" heigth=25% width=25%>
 
