@@ -125,6 +125,7 @@ The following code snippets help to understand the concept of ChangeNotifierProv
 * Provider State Management, which is recommended by Google as well, mainly provides you with a central point to manage the state, and to write front-end logic. A provider is a third-party library. Here, we need to understand three main concepts to use this library.
 
 
+# Contact Us Page With Interaction
 <img src= "https://github.com/user-attachments/assets/e0a52c76-d709-4b4e-b5a5-3b4a49f64d40" heigth=22% width= 28%>
 
 https://github.com/user-attachments/assets/54953111-ad0e-456f-b60e-57c48c053915
@@ -132,7 +133,40 @@ https://github.com/user-attachments/assets/54953111-ad0e-456f-b60e-57c48c053915
 
 # url_launcher:-
 
+#  Photo Gallery With Biometric Authentication
+* Local Authentication Package
 
+->The local_auth package, provided by the Flutter team, enables you to integrate local authentication methods like fingerprint, Touch ID, Face ID, passcode, PIN, or pattern recognition into your Flutter app. This enhances security by allowing users to authenticate themselves using their device's built-in features instead of relying solely on passwords.
+
+## Stepes
+
+1> Add Dependency
+
+Open your project's pubspec.yaml file.
+Under the dependencies section, add the following line:
+
+## YAML:-
+
+local_auth: ^2.2.0 
+# Replace with the latest version if available
+Run flutter pub get to install the package. iOS Integration
+Note that this plugin works with both Touch ID and Face ID. However, to use the latter, you need also to add:
+    <key>NSFaceIDUsageDescription</key>
+<string>Why is my app authenticating using face id?</string>
+to your Info.plist file. Failure to do so results in a dialogue that tells the user your app has not been updated to use Face ID. ** Android Integration** MainActivity.kt:
+import io.flutter.embedding.android.FlutterFragmentActivity
+```blash 
+class MainActivity : FlutterFragmentActivity() {
+// ...
+ }
+Update your project's AndroidManifest.xml file to include the USE_BIOMETRIC permissions:
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+         package="com.example.app">
+         
+ <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+ 
+<manifest>
+```
 <img src="https://github.com/user-attachments/assets/60485682-cbb3-4c48-9c72-9f17519efbbb" heigth=22% width=28%>
 
 <img src="https://github.com/user-attachments/assets/4e554be1-03be-4c3a-b281-f549b8d8fdc9" heigth=22% width=28%>
