@@ -1,5 +1,9 @@
 # projectadvflutter
 
+ • The Stepper Widget in Flutter is a versatile tool that plays a crucial role in enhancing user experience within mobile applications.
+
+• It provides an intuitive way to guide users through a multi-step process, allowing developers to create interactive and user-friendly interfaces.
+
 <img src="https://github.com/user-attachments/assets/882982a3-df6d-418b-a3e2-f6b2c7546b55" heigth=25% width=25%>
 <img src="https://github.com/user-attachments/assets/adc1babc-7fbc-4c8a-bb89-2535a413f491" heigth=25% width=25%>
 
