@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class Intopage extends ChangeNotifier {
-//  late SharedPreferences sharedPreferences;
+
+class OneTimeChangeProvider extends ChangeNotifier {
+  late SharedPreferences sharedPreferences;
   bool isTrue = false;
 
   Future<void> setMethod(bool isTrue) async {
-   // sharedPreferences = await SharedPreferences.getInstance();
-   // sharedPreferences.setBool('home', isTrue);
+    sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool('home', isTrue);
     notifyListeners();
   }
 
@@ -17,12 +19,12 @@ class Intopage extends ChangeNotifier {
   }
 
   Future<void> getMethod() async {
-    //SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-   // isTrue = sharedPreferences.getBool('home') ?? false;
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    isTrue = sharedPreferences.getBool('home') ?? false;
     notifyListeners();
   }
 
-  Intopage                                 (bool theme) {
+  OneTimeChangeProvider(bool theme) {
     isTrue = theme;
     notifyListeners();
   }

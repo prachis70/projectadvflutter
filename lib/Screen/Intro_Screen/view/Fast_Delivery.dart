@@ -15,8 +15,8 @@ class _fast_DivState extends State<fast_Div> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: AppBar(),
+    return Scaffold(backgroundColor: Colors.white,
+      appBar: AppBar(backgroundColor: Colors.white,),
       body: Center(
         child: InkWell(onTap: () {
 
@@ -29,10 +29,10 @@ class _fast_DivState extends State<fast_Div> {
                 width: width * 0.7,
                 decoration: BoxDecoration(
                   image: DecorationImage(fit: BoxFit.cover, image: AssetImage('assets/imgs/food1.jpeg'),),),),
-              SizedBox(height: height*0.1,),
-              Text('\n \n Fast Delivery', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+             // SizedBox(height: height*0.1,),
+              Text('\n \n Fast Delivery', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30,color: Colors.black),
               ),
-              Text(textAlign: TextAlign.center, '  Lorem ipsum dolor sit amet,consetetur\n sadipscing elitr,sed diam nonumy eirmod empor.', style: TextStyle(fontSize: 20, color: Colors.black45),
+              Text(textAlign: TextAlign.center, '  Lorem ipsum dolor sit amet,consetetur\n sadipscing elitr,sed diam nonumy eirmod empor.', style: TextStyle(fontSize: 15, color: Colors.black45),
               ),
               SizedBox(height: height * 0.2,),
               Row(children: [
